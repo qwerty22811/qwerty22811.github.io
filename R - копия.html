@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-32">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     body {
+       background-color: pink;
+       text-align: center;
+       font-size: 24px;
+       margin-top: 20%;
+       position: relative;
+     }
+     button {
+       padding: 10px 20px;
+       font-size: 18px;
+     }
+  </style>
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerText = "Ураааа, Тёма, я тебя очень сильно люблю!!!!";
+      var img = document.getElementById("flowers");
+      img.style.display = "block";
+    }
+    function moveNoButton() {
+      var button = document.getElementById("noButton");
+      var x = Math.random() * window.innerWidth;
+      var y = Math.random() * window.innerHeight;
+      button.style.position = "absolute";
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    } 
+  </script>
+</head>
+<body>
+  <div>
+    <p>Ты будешь моей валентинкой?</p>
+    <button onclick="sayYes()">Да</button>
+    <button id="noButton" onclick="moveNoButton()">Нет</button>
+    <p id="response"></p>
+	<center>
+    <img id="flowers" src="C:\Users\user\Downloads\Новая папка\1.gif" style="display:none;max-width:200px;height:auto;">
+	</center>
+  </div>
+</body>
+</html>
